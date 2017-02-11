@@ -1,0 +1,9 @@
+# Standard dotnet outputs
+bin
+obj
+
+#VS environment Configuration
+.vs
+
+# bower
+content/bower_components
