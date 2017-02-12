@@ -14,53 +14,52 @@
     <link rel="stylesheet" href="content/styles/main.css">
     
   </head>
-  <body>
+  <body ng-app="markdweet-app">
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active">
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-        </ul>
-        <h3 class="text-muted">markdweet</h3>
-      </div>
+    <!-- Add your site or application content here -->
+    <div class="header">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
 
-      <div class="jumbotron">
-        <h1>'Allo, 'Allo!</h1>
-        <p class="lead">Always a pleasure scaffolding your apps.</p>
-        <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
-      </div>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
 
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>HTML5 Boilerplate</h4>
-          <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
+            <a class="navbar-brand" href="#/">markdweet</a>
+          </div>
 
-          <h4>Bootstrap</h4>
-          <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
+          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#/">Home</a></li>
+              <li><a ng-href="#/about">About</a></li>
+            </ul>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="footer">
-        <p>♥ from the Yeoman team</p>
-      </div>
+    <div class="container">
+      <div ng-view=""></div>
+    </div>
+
+    <div class="footer">
+      <p>♥ from the Yeoman team</p>
     </div>
 
     <script src="content/bower_components/jquery/dist/jquery.js"></script>
     <script src="content/bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="content/bower_components/angular/angular.js"></script>
-    <script src="content/bower_components/angular/angular-route.js"></script>
+    <script src="content/bower_components/angular-route/angular-route.js"></script>
     
     <script src="content/scripts/main.js"></script>
+    <script src="content/scripts/controllers/main.js"></script>
   </body>
 </html>
