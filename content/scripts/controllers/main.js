@@ -2,15 +2,23 @@
 
 /**
  * @ngdoc function
- * @name markdweet-app.controller:MainCtrl
+ * @name markdweet-app.controller:main-controller
  * @description
- * # MainCtrl
+ * # main-controller
  * Controller of the markdweet-app
  */
 angular.module('markdweet-app')
-  .controller('main-controller', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS'
-    ];
-  });
+  .controller('main-controller', ['$scope', function ($scope) {
+    $scope.markdown = ''
+
+    $scope.updateCount = function() {
+      $scope.charCount = ($scope.markdown || '').length 
+    }
+
+    $scope.clear = function() {
+      $scope.markdown = '' 
+      $scope.updateCount()
+    }
+
+    $scope.updateCount();
+  }]);

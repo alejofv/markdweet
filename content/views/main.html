@@ -1,13 +1,28 @@
-<div class="jumbotron">
+<div class="jumbotron" ng-controller="main-controller">
   <h1>Markdweet</h1>
   <p class="lead">
-    Just write, then share
-    <br />
-    <span class="small">You can format your text using markdonw</span>
+    write, preview, tweak and share
   </p>
-  <p>
-  <input type="text"></input>
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
 </div>
-
+<div class="row">
+  <div class="col-sm-6">
+    your text:
+    <p class="pull-right">{{ charCount }} chars</p>
+    <textarea class="form-control" ng-model="markdown" ng-change="updateCount()" rows="5"></textarea>
+  </div>
+  <div class="col-sm-6">
+    preview:
+    <div class="panel">
+      <span>{{ markdown }}</span>
+    </div>
+  </div>
+</div>
+<hr />
+<div class="row">
+  <div class="col-xs-2">
+    <a class="btn btn-sm btn-default" ng-click="clear()"><span class="glyphicon glyphicon-remove"></span>&nbsp;Start over</a>
+  </div>
+  <div class="col-xs-2 col-xs-offset-8 text-right">
+    <a class="btn btn-sm btn-success" ng-href="#/"><span class="glyphicon glyphicon-ok"></span>&nbsp;Looks good</a>
+  </div>
+</div>

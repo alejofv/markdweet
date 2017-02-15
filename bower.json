@@ -2,7 +2,9 @@
   "name": "markdweet",
   "private": true,
   "dependencies": {
-    "bootstrap": "~3.3.5"
+    "bootstrap": "~3.3.5",
+    "angular": "^1.6.2",
+    "angular-route": "^1.6.2"
   },
   "overrides": {
     "bootstrap": {
