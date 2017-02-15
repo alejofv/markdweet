@@ -12,7 +12,8 @@ console.log('\'Allo \'Allo!');
  */
 angular
   .module('markdweet-app', [
-    'ngRoute'
+    'ngRoute',
+    'btford.markdown'
   ])
   .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $locationProvider.hashPrefix('')

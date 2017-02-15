@@ -8,16 +8,17 @@
   <div class="col-sm-6">
     your text:
     <p class="pull-right">{{ charCount }} chars</p>
-    <textarea class="form-control" ng-model="markdown" ng-change="updateCount()" rows="5"></textarea>
+    <textarea class="form-control" ng-model="markdown" ng-change="updateCount()" rows="10"></textarea>
   </div>
   <div class="col-sm-6">
     preview:
-    <div class="panel">
-      <span>{{ markdown }}</span>
+    <div class="panel panel-default markdown-preview">
+      <div btf-markdown="markdown">
+      </div>
     </div>
   </div>
 </div>
-<hr />
+
 <div class="row">
   <div class="col-xs-2">
     <a class="btn btn-sm btn-default" ng-click="clear()"><span class="glyphicon glyphicon-remove"></span>&nbsp;Start over</a>
