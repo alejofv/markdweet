@@ -23,6 +23,10 @@ angular
         templateUrl: 'content/views/main.html',
         controller: 'main-controller'
       })
+      .when('/preview', {
+        templateUrl: 'content/views/preview.html',
+        controller: 'preview-controller'
+      })
       .when('/about', {
         templateUrl: 'content/views/about.html',
       })

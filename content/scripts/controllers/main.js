@@ -8,7 +8,7 @@
  * Controller of the markdweet-app
  */
 angular.module('markdweet-app')
-  .controller('main-controller', ['$scope', function ($scope) {
+  .controller('main-controller', ['$scope', '$location', 'containerService', function ($scope, $location, containerService) {
     $scope.markdown = ''
 
     $scope.updateCount = function() {
@@ -18,6 +18,11 @@ angular.module('markdweet-app')
     $scope.clear = function() {
       $scope.markdown = '' 
       $scope.updateCount()
+    }
+
+    $scope.continue = function() {
+      containerService.setContent($scope.markdown)
+      $location.path('/preview');
     }
 
     $scope.updateCount();
