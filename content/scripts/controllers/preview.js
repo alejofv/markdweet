@@ -13,6 +13,16 @@ angular.module('markdweet-app')
 
     $scope.back = function() {
       containerService.setContent('')
-      $location.path('/');
+      $location.path('/')
     }
-  }]);
+
+    $scope.save = function() {
+      domtoimage.toBlob(document.getElementById('md-content'), { bgcolor: '#FFFFFF' })
+        .then(function (blob) {
+          window.saveAs(blob, 'md-content.png')
+        })
+        .catch(function (error) {
+          console.error('oops, something went wrong!', error)
+        })
+    }
+  }])

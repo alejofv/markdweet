@@ -1,7 +1,9 @@
+<!--<link rel="stylesheet" ng-href="content/styles/splendor.css"></link>-->
+
 <div class="row">
   <div class="col-sm-6 col-sm-offset-3">
     <div class="panel panel-default markdown-preview">
-      <div btf-markdown="markdown">
+      <div btf-markdown="markdown" id="md-content">
       </div>
     </div>
   </div>
@@ -10,5 +12,8 @@
 <div class="row">
   <div class="col-xs-2">
     <a class="btn btn-sm btn-default" ng-click="back()"><span class="glyphicon glyphicon-remove"></span>&nbsp;Start over</a>
+  </div>
+  <div class="col-xs-2 col-xs-offset-8 text-right">
+    <a class="btn btn-sm btn-success" ng-click="save()"><span class="glyphicon glyphicon-save"></span>&nbsp;Save</a>
   </div>
 </div>

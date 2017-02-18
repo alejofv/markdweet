@@ -22,8 +22,8 @@ angular.module('markdweet-app')
 
     $scope.continue = function() {
       containerService.setContent($scope.markdown)
-      $location.path('/preview');
+      $location.path('/preview')
     }
 
-    $scope.updateCount();
-  }]);
+    $scope.updateCount()
+  }])
