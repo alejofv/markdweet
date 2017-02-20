@@ -10,14 +10,25 @@
 angular.module('markdweet-app')
   .controller('preview-controller', ['$scope', '$location', 'containerService', function ($scope, $location, containerService) {
     $scope.markdown = containerService.getContent()
+    $scope.styles = [
+      'splendor',
+      'air'
+    ]
+
+    $scope.selectedStyle = 'splendor'
 
     $scope.back = function() {
-      containerService.setContent('')
       $location.path('/')
     }
 
     $scope.save = function() {
-      domtoimage.toBlob(document.getElementById('md-content'), { bgcolor: '#FFFFFF' })
+      domtoimage.toBlob(
+        document.getElementById('md-content'),
+        {
+          bgcolor: '#FFFFFF',
+          height: 400,
+          width: 600
+        })
         .then(function (blob) {
           window.saveAs(blob, 'md-content.png')
         })

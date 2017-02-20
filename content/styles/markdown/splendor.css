@@ -1,0 +1,176 @@
+@import url(http://fonts.googleapis.com/css?family=Merriweather:300italic,300);
+
+#md-content {
+  font-size: 14px;
+  line-height: 1.85;
+  /* https://github.com/mrmrs/fluidity */
+  font-size: 18px;
+  color: #444;
+  font-family: 'Merriweather', Georgia, serif;
+  margin: 0;
+  max-width: 100%;
+  /* === A bit of a gross hack so we can have bleeding divs/blockquotes. */
+  /* Counteract the specificity of the gross *:not() chain. */
+  /*  === End gross hack */
+}
+@media print {
+  #md-content *,
+  #md-content *:before,
+  #md-content *:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  #md-content a,
+  #md-content a:visited {
+    text-decoration: underline;
+  }
+  #md-content a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  #md-content abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  #md-content a[href^="#"]:after,
+  #md-content a[href^="javascript:"]:after {
+    content: "";
+  }
+  #md-content pre,
+  #md-content blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  #md-content thead {
+    display: table-header-group;
+  }
+  #md-content tr,
+  #md-content img {
+    page-break-inside: avoid;
+  }
+  #md-content img {
+    max-width: 100% !important;
+  }
+  #md-content p,
+  #md-content h2,
+  #md-content h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  #md-content h2,
+  #md-content h3 {
+    page-break-after: avoid;
+  }
+}
+@media screen and (min-width: 32rem) and (max-width: 48rem) {
+  #md-content {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 48rem) {
+  #md-content {
+    font-size: 16px;
+  }
+}
+#md-content p,
+#md-content .splendor-p {
+  margin-bottom: 1.3rem;
+}
+#md-content h1,
+#md-content .splendor-h1,
+#md-content h2,
+#md-content .splendor-h2,
+#md-content h3,
+#md-content .splendor-h3,
+#md-content h4,
+#md-content .splendor-h4 {
+  margin: 1.414rem 0 .5rem;
+  font-weight: inherit;
+  line-height: 1.42;
+}
+#md-content h1,
+#md-content .splendor-h1 {
+  margin-top: 0;
+  font-size: 3.998rem;
+}
+#md-content h2,
+#md-content .splendor-h2 {
+  font-size: 2.827rem;
+}
+#md-content h3,
+#md-content .splendor-h3 {
+  font-size: 1.999rem;
+}
+#md-content h4,
+#md-content .splendor-h4 {
+  font-size: 1.414rem;
+}
+#md-content h5,
+#md-content .splendor-h5 {
+  font-size: 1.121rem;
+}
+#md-content h6,
+#md-content .splendor-h6 {
+  font-size: .88rem;
+}
+#md-content small,
+#md-content .splendor-small {
+  font-size: .707em;
+}
+#md-content img,
+#md-content canvas,
+#md-content iframe,
+#md-content video,
+#md-content svg,
+#md-content select,
+#md-content textarea {
+  max-width: 100%;
+}
+#md-content p,
+#md-content *:not(div):not(img):not(body):not(html):not(li):not(blockquote):not(p) {
+  margin: 1rem auto 1rem;
+  max-width: 36rem;
+  padding: .25rem;
+}
+#md-content div {
+  width: 100%;
+}
+#md-content div img {
+  width: 100%;
+}
+#md-content blockquote p {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin: 1rem auto 1rem;
+  max-width: 48rem;
+}
+#md-content li {
+  margin-left: 2rem;
+}
+#md-content h1 {
+  padding: 4rem 0 !important;
+}
+#md-content p {
+  color: #555;
+  height: auto;
+  line-height: 1.45;
+}
+#md-content pre,
+#md-content code {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+}
+#md-content pre {
+  background-color: #fafafa;
+  font-size: .8rem;
+  overflow-x: scroll;
+  padding: 1.125em;
+}
+#md-content a,
+#md-content a:visited {
+  color: #3498db;
+}
+#md-content a:hover,
+#md-content a:focus,
+#md-content a:active {
+  color: #2980b9;
+}

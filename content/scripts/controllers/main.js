@@ -9,14 +9,16 @@
  */
 angular.module('markdweet-app')
   .controller('main-controller', ['$scope', '$location', 'containerService', function ($scope, $location, containerService) {
-    $scope.markdown = ''
+    $scope.markdown = containerService.getContent()
 
     $scope.updateCount = function() {
       $scope.charCount = ($scope.markdown || '').length 
     }
 
     $scope.clear = function() {
-      $scope.markdown = '' 
+      containerService.setContent('')
+      $scope.markdown = containerService.getContent()
+      
       $scope.updateCount()
     }
 

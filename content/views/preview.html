@@ -1,7 +1,8 @@
-<!--<link rel="stylesheet" ng-href="content/styles/splendor.css"></link>-->
+<link rel="stylesheet" ng-href="content/styles/markdown/{{ selectedStyle }}.css"></link>
 
-<div class="row">
+<div class="row form form-horizontal">
   <div class="col-sm-6 col-sm-offset-3">
+    <select ng-model="selectedStyle" ng-options="item for item in styles" class="form-control"></select>
     <div class="panel panel-default markdown-preview">
       <div btf-markdown="markdown" id="md-content">
       </div>
