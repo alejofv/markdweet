@@ -17,6 +17,11 @@ angular.module('markdweet-app')
 
     $scope.selectedStyle = 'splendor'
 
+    $scope.size = {
+      width: 600,
+      height: 400
+    }
+
     $scope.back = function() {
       $location.path('/')
     }
@@ -26,8 +31,8 @@ angular.module('markdweet-app')
         document.getElementById('md-content'),
         {
           bgcolor: '#FFFFFF',
-          height: 400,
-          width: 600
+          height: $scope.size.height,
+          width: $scope.size.width
         })
         .then(function (blob) {
           window.saveAs(blob, 'md-content.png')
