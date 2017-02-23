@@ -1,7 +1,5 @@
 'use strict';
 
-console.log('\'Allo \'Allo!');
-
 /**
  * @ngdoc overview
  * @name markdweet-app
@@ -35,5 +33,4 @@ angular
         redirectTo: '/'
       })
   }])
-
 
