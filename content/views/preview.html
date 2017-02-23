@@ -1,23 +1,37 @@
 <link rel="stylesheet" ng-href="content/styles/markdown/{{ selectedStyle }}.css"></link>
 
 <div class="row form form-horizontal">
-  <div class="col-sm-6 col-sm-offset-3">
+  <div class="col-sm-6 col-sm-offset-3 text-center">
     <select ng-model="selectedStyle" ng-options="item for item in styles" class="form-control"></select>
-    <div class="panel panel-default markdown-preview">
-      <div btf-markdown="markdown" id="md-content">
-      </div>
+  </div>
+</div>
+<br />
+
+<div>
+  <div class="panel panel-default markdown-preview"
+        resizable
+        r-directions="['right', 'bottom', 'left']"
+        r-centered-x="true"
+        r-centered-y="true"
+        r-width="markdownSize.width"
+        r-height="markdownSize.height">
+    <div btf-markdown="markdown" id="md-content">
     </div>
   </div>
+</div>
+
+<br />
+<div class="row form form-horizontal">
   <div class="col-sm-3 col-sm-offset-3 col-xs-6">
     <div class="input-group">
       <span class="input-group-addon" id="basic-addon-width"><span class="glyphicon glyphicon-resize-horizontal"></span>&nbsp;width</span>
-      <input type="number" class="form-control" aria-describedby="basic-addon-width" ng-model="size.width">
+      <input type="number" class="form-control" aria-describedby="basic-addon-width" ng-model="markdownSize.width">
     </div>
   </div>
   <div class="col-sm-3 col-xs-6">
     <div class="input-group">
       <span class="input-group-addon" id="basic-addon-height"><span class="glyphicon glyphicon-resize-vertical"></span>&nbsp;height</span>
-      <input type="number" class="form-control" aria-describedby="basic-addon-width" ng-model="size.height">
+      <input type="number" class="form-control" aria-describedby="basic-addon-width" ng-model="markdownSize.height">
     </div>
   </div>
 </div>

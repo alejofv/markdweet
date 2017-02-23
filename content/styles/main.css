@@ -76,7 +76,5 @@ body {
 }
 
 .markdown-preview {
-  margin-top: 0.8em;
-  height: 22.5em;
-  overflow: auto;
+  margin: 0.8em auto auto;
 }

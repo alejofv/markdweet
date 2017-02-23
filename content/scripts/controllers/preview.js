@@ -17,10 +17,20 @@ angular.module('markdweet-app')
 
     $scope.selectedStyle = 'splendor'
 
-    $scope.size = {
-      width: 600,
-      height: 400
+    $scope.markdownSize = {
+      width: 500,
+      height: 300
     }
+
+    $scope.events = [];
+    $scope.$on("angular-resizable.resizeEnd", function (event, args) {
+			$scope.events.unshift(event)
+
+			if(args.width)
+				$scope.markdownSize.width = args.width
+			if(args.height)
+				$scope.markdownSize.height = args.height
+    })
 
     $scope.back = function() {
       $location.path('/')
@@ -31,8 +41,8 @@ angular.module('markdweet-app')
         document.getElementById('md-content'),
         {
           bgcolor: '#FFFFFF',
-          height: $scope.size.height,
-          width: $scope.size.width
+          height: $scope.markdownSize.height,
+          width: $scope.markdownSize.width
         })
         .then(function (blob) {
           window.saveAs(blob, 'md-content.png')

@@ -7,7 +7,7 @@
   font-size: 18px;
   color: #444;
   font-family: 'Merriweather', Georgia, serif;
-  margin: 0;
+  margin: 0 auto;
   max-width: 100%;
   /* === A bit of a gross hack so we can have bleeding divs/blockquotes. */
   /* Counteract the specificity of the gross *:not() chain. */
